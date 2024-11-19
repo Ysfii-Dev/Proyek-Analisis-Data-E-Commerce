@@ -12,13 +12,13 @@ sns.set(style='dark')
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date",
                  "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
 all_df = pd.read_csv(
-    r'/Ecommerce-public-dataset/all_data.csv')
+    r'/workspaces/Proyek-Analisis-Data-E-Commerce/Ecommerce-public-dataset/all_data.csv')
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
 # Geolocation Dataset
 geolocation = pd.read_csv(
-    '/Ecommerce-public-dataset/geolocation.csv')
+    '/workspaces/Proyek-Analisis-Data-E-Commerce/Ecommerce-public-dataset/geolocation.csv')
 data = geolocation.drop_duplicates(subset='customer_unique_id')
 
 for col in datetime_cols:
@@ -33,7 +33,7 @@ with st.sidebar:
     st.title("Yusfi Syawali")
 
     # Logo Image
-    st.image("/dashboard/dicoding.jpg")
+    st.image("/workspaces/Proyek-Analisis-Data-E-Commerce/dashboard/dicoding.jpg")
 
     # Date Range
     start_date, end_date = st.date_input(
