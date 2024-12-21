@@ -36,3 +36,7 @@ pip install -r requirements.txt
 cd proyek_analisis_data/dashboard/
 streamlit run dashboard.py
 ```
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
